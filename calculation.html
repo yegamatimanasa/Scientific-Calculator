@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scientific Calculator</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="heading" style="text-align: center">
+        <h2>Scientific Calculator</h2>
+      </div>
+
+      <div class="display">
+        <input id="screen" type="text" placeholder="0" />
+      </div>
+
+      <div class="btns">
+        <div class="row">
+          <button id="del" onclick="backspc()">DEL</button>
+          <button onclick="fact()">x!</button>
+          <button class="btn">(</button>
+          <button class="btn">)</button>
+          <button class="btn">%</button>
+          <button id="ac" onclick="screen.value=''">Clear</button>
+        </div>
+
+        <div class="row">
+          <button onclick="sin()">sin</button>
+          <button onclick="pi()">π</button>
+          <button class="btn">7</button>
+          <button class="btn">8</button>
+          <button class="btn">9</button>
+          <button class="btn">÷</button>
+        </div>
+
+        <div class="row">
+          <button onclick="cos()">cos</button>
+          <button onclick="log()">log</button>
+          <button class="btn">4</button>
+          <button class="btn">5</button>
+          <button class="btn">6</button>
+          <button class="btn">×</button>
+        </div>
+
+        <div class="row">
+          <button onclick="tan()">tan</button>
+          <button onclick="sqrt()">√</button>
+          <button class="btn">1</button>
+          <button class="btn">2</button>
+          <button class="btn">3</button>
+          <button class="btn">-</button>
+        </div>
+
+        <div class="row">
+          <button onclick="screen.value = degrees_to_radians(screen.value)">
+            RAD
+          </button>
+          <button onclick="pow()">
+            x
+            <span style="position: relative; bottom: 0.4em; right: 0.1em"
+              >2</span
+            >
+          </button>
+          <button onclick="cubical()">∛</button>
+          <button class="btn">0</button>
+          <button class="btn">.</button>
+          <button class="btn">+</button>
+        </div>
+
+        <div class="row">
+          <button onclick="e()">e</button>
+          <button onclick="cube()">
+            x
+            <span style="position: relative; bottom: 0.4em; right: 0.1em"
+              >3</span
+            >
+          </button>
+          <button onclick="inverse()">1/x</button>
+          <button onclick="exp()">EXP</button>
+          <button id="eval" onclick="screen.value=eval(screen.value)">=</button>
+          <button onclick="round()">RND</button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./script.js"></script>
+</html>
